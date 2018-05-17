@@ -27,12 +27,39 @@ object Form1: TForm1
     TabOrder = 0
   end
   object Button1: TButton
-    Left = 261
+    Left = 296
     Height = 25
-    Top = 77
+    Top = 8
     Width = 75
     Caption = 'Button1'
     OnClick = Button1Click
     TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 296
+    Height = 25
+    Top = 47
+    Width = 75
+    Caption = 'Button2'
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+  object ColorBox1: TColorBox
+    Left = 232
+    Height = 24
+    Top = 110
+    Width = 240
+    Style = [cbSystemColors, cbCustomColor]
+    ItemHeight = 16
+    TabOrder = 3
+  end
+  object Button3: TButton
+    Left = 233
+    Height = 25
+    Top = 142
+    Width = 75
+    Caption = 'Button3'
+    OnClick = Button3Click
+    TabOrder = 4
   end
 end

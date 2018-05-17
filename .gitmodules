@@ -1,3 +1,6 @@
 [submodule "src"]
 	path = src
 	url = https://github.com/in0k-pas-src/in0k-ext4ColorTheme_src.git
+[submodule "srcExt/in0k-colorSpace_src"]
+	path = srcExt/in0k-colorSpace_src
+	url = https://github.com/in0k-pas-src/in0k-colorSpace_src.git
