@@ -7,7 +7,8 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, Unit1, in0k_ext4ColorTheme_itemsLair, in0k_ext4ColorTheme_maker
+  Forms, Unit1, in0k_ext4ColorTheme_itemsLair, in0k_ext4ColorTheme_maker, 
+csc_sRGB_2_HSV, csc_HSV_2_sRGB
   { you can add units after this };
 
 {$R *.res}
