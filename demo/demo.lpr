@@ -7,7 +7,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, tachartlazaruspkg, Unit1, in0k_ext4ColorTheme_itemsLair,
+  Forms, tachartlazaruspkg, tachartaggpas, Unit1, in0k_ext4ColorTheme_itemsLair,
   in0k_ext4ColorTheme_maker, Unit2
   { you can add units after this };
 

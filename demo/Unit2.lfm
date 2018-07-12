@@ -1,43 +1,55 @@
 object Form2: TForm2
-  Left = 375
+  Left = 296
   Height = 602
-  Top = 152
+  Top = 65
   Width = 829
   Caption = 'Form2'
   ClientHeight = 602
   ClientWidth = 829
-  LCLVersion = '1.8.4.0'
+  Color = clWindow
+  LCLVersion = '1.6.4.0'
   Visible = True
   object Chart1: TChart
-    Left = 56
+    Left = 88
     Height = 385
     Top = 120
-    Width = 634
+    Width = 602
+    AntialiasingMode = amOn
     AxisList = <    
       item
-        Marks.LabelBrush.Style = bsClear
         Minors = <>
         Title.LabelFont.Orientation = 900
-        Title.LabelBrush.Style = bsClear
       end    
       item
         Alignment = calBottom
-        Marks.LabelBrush.Style = bsClear
         Minors = <>
-        Title.LabelBrush.Style = bsClear
       end>
-    Foot.Brush.Color = clBtnFace
+    BackColor = clWhite
+    Foot.Brush.Color = clGradientInactiveCaption
+    Foot.Brush.Style = bsClear
     Foot.Font.Color = clBlue
+    Frame.Color = clBtnHighlight
+    Frame.Mode = pmNotMerge
     Title.Brush.Color = clBtnFace
     Title.Font.Color = clBlue
     Title.Text.Strings = (
       'TAChart'
     )
+    OnAfterDrawBackWall = Chart1AfterDrawBackWall
+    OnBeforeDrawBackground = Chart1BeforeDrawBackground
+    OnBeforeDrawBackWall = Chart1BeforeDrawBackWall
+    Color = clWhite
+    DoubleBuffered = True
     object Chart1LineSeries1: TLineSeries
       Source = ListChartSource1
     end
     object Chart1LineSeries2: TLineSeries
       Source = ListChartSource2
+    end
+    object Chart1AreaSeries1: TAreaSeries
+      Source = ListChartSource1
+      UseZeroLevel = True
+      ZeroLevel = 1
     end
   end
   object Button1: TButton
@@ -112,5 +124,10 @@ object Form2: TForm2
     YMin = 0
     left = 458
     top = 46
+  end
+  object ChartGUIConnectorAggPas1: TChartGUIConnectorAggPas
+    PixelFormat = afpimRGBA32
+    left = 548
+    top = 52
   end
 end
