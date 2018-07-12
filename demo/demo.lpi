@@ -24,16 +24,22 @@
         <FormatVersion Value="1"/>
       </local>
     </RunParams>
-    <RequiredPackages Count="3">
+    <RequiredPackages Count="5">
       <Item1>
-        <PackageName Value="TAChartAggPas"/>
+        <PackageName Value="mbColorLibLaz"/>
       </Item1>
       <Item2>
-        <PackageName Value="TAChartLazarusPkg"/>
+        <PackageName Value="TAChartBgra"/>
       </Item2>
       <Item3>
-        <PackageName Value="LCL"/>
+        <PackageName Value="TAChartAggPas"/>
       </Item3>
+      <Item4>
+        <PackageName Value="TAChartLazarusPkg"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="LCL"/>
+      </Item5>
     </RequiredPackages>
     <Units Count="20">
       <Unit0>

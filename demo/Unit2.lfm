@@ -1,28 +1,32 @@
 object Form2: TForm2
-  Left = 296
+  Left = 462
   Height = 602
-  Top = 65
+  Top = 153
   Width = 829
   Caption = 'Form2'
   ClientHeight = 602
   ClientWidth = 829
   Color = clWindow
-  LCLVersion = '1.6.4.0'
+  LCLVersion = '1.8.4.0'
   Visible = True
   object Chart1: TChart
-    Left = 88
+    Left = 24
     Height = 385
-    Top = 120
-    Width = 602
+    Top = 128
+    Width = 482
     AntialiasingMode = amOn
     AxisList = <    
       item
+        Marks.LabelBrush.Style = bsClear
         Minors = <>
         Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
       end    
       item
         Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
         Minors = <>
+        Title.LabelBrush.Style = bsClear
       end>
     BackColor = clWhite
     Foot.Brush.Color = clGradientInactiveCaption
@@ -30,26 +34,45 @@ object Form2: TForm2
     Foot.Font.Color = clBlue
     Frame.Color = clBtnHighlight
     Frame.Mode = pmNotMerge
+    Legend.Visible = True
+    Proportional = True
     Title.Brush.Color = clBtnFace
     Title.Font.Color = clBlue
     Title.Text.Strings = (
       'TAChart'
     )
+    OnAfterDrawBackground = Chart1AfterDrawBackground
     OnAfterDrawBackWall = Chart1AfterDrawBackWall
+    OnAfterPaint = Chart1AfterPaint
     OnBeforeDrawBackground = Chart1BeforeDrawBackground
     OnBeforeDrawBackWall = Chart1BeforeDrawBackWall
     Color = clWhite
     DoubleBuffered = True
+    object cls_D: TLineSeries
+      Source = LCS_D
+    end
+    object cls_Form: TLineSeries
+      LinePen.Color = clForm
+      Source = LCS_Form
+    end
+    object cls_Window: TLineSeries
+      LinePen.Color = clWindow
+      Source = LCS_Window
+    end
+    object cls_windowText: TLineSeries
+      LinePen.Color = clWindowText
+      Source = LCS_Text
+    end
+    object cls_grayText: TLineSeries
+      LinePen.Color = clGrayText
+      Source = LCS_GrayText
+    end
     object Chart1LineSeries1: TLineSeries
+      Title = 'ffgfg'
+      ZPosition = 1
+      MarkPositions = lmpInside
+      ShowPoints = True
       Source = ListChartSource1
-    end
-    object Chart1LineSeries2: TLineSeries
-      Source = ListChartSource2
-    end
-    object Chart1AreaSeries1: TAreaSeries
-      Source = ListChartSource1
-      UseZeroLevel = True
-      ZeroLevel = 1
     end
   end
   object Button1: TButton
@@ -84,6 +107,7 @@ object Form2: TForm2
     Width = 100
     Style = [cbStandardColors, cbExtendedColors, cbSystemColors, cbCustomColor, cbCustomColors]
     ItemHeight = 16
+    OnChange = ColorBox1Change
     TabOrder = 2
   end
   object ColorBox2: TColorBox
@@ -106,28 +130,128 @@ object Form2: TForm2
     ItemHeight = 16
     TabOrder = 4
   end
+  object HColorPicker1: THColorPicker
+    Left = 96
+    Height = 22
+    Top = 536
+    Width = 267
+    TabOrder = 5
+    OnChange = HColorPicker1Change
+    Luminance = 128
+    HintFormat = 'Hue: %value (selected)'
+  end
+  object Shape1: TShape
+    Left = 714
+    Height = 65
+    Top = 136
+    Width = 65
+  end
+  object Label3: TLabel
+    Left = 560
+    Height = 15
+    Top = 222
+    Width = 34
+    Caption = 'Label3'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 600
+    Height = 15
+    Top = 222
+    Width = 34
+    Caption = 'Label4'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 640
+    Height = 15
+    Top = 222
+    Width = 34
+    Caption = 'Label5'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 560
+    Height = 15
+    Top = 240
+    Width = 34
+    Caption = 'Label6'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 600
+    Height = 15
+    Top = 240
+    Width = 34
+    Caption = 'Label7'
+    ParentColor = False
+  end
+  object Label8: TLabel
+    Left = 640
+    Height = 15
+    Top = 240
+    Width = 34
+    Caption = 'Label8'
+    ParentColor = False
+  end
+  object Label9: TLabel
+    Left = 560
+    Height = 15
+    Top = 256
+    Width = 34
+    Caption = 'Label9'
+    ParentColor = False
+  end
+  object Label10: TLabel
+    Left = 600
+    Height = 15
+    Top = 256
+    Width = 40
+    Caption = 'Label10'
+    ParentColor = False
+  end
+  object Label11: TLabel
+    Left = 640
+    Height = 15
+    Top = 256
+    Width = 40
+    Caption = 'Label11'
+    ParentColor = False
+  end
+  object LCS_Form: TListChartSource
+    left = 464
+    top = 8
+  end
+  object LCS_Text: TListChartSource
+    left = 560
+    top = 8
+  end
+  object UserDefinedChartSource1: TUserDefinedChartSource
+    PointsNumber = 2
+    left = 19
+    top = 91
+  end
+  object ListChartSource3: TListChartSource
+    DataPoints.Strings = (
+      '0|0|?|'
+    )
+    left = 20
+    top = 160
+  end
+  object LCS_D: TListChartSource
+    left = 416
+    top = 8
+  end
+  object LCS_Window: TListChartSource
+    left = 464
+    top = 64
+  end
+  object LCS_GrayText: TListChartSource
+    left = 560
+    top = 64
+  end
   object ListChartSource1: TListChartSource
-    left = 16
-    top = 16
-  end
-  object ListChartSource2: TListChartSource
-    left = 44
-    top = 44
-  end
-  object RandomChartSource1: TRandomChartSource
-    PointsNumber = 30
-    RandSeed = 1605881063
-    XMax = 1
-    XMin = 0
-    YCount = 50
-    YMax = 0.5
-    YMin = 0
-    left = 458
-    top = 46
-  end
-  object ChartGUIConnectorAggPas1: TChartGUIConnectorAggPas
-    PixelFormat = afpimRGBA32
-    left = 548
-    top = 52
+    left = 639
+    top = 43
   end
 end
