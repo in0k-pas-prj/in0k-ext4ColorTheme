@@ -8,7 +8,8 @@ uses
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms, tachartlazaruspkg, tachartbgra, tachartaggpas, Unit1,
-  in0k_ext4ColorTheme_itemsLair, in0k_ext4ColorTheme_maker, Unit2
+  in0k_ext4ColorTheme_itemsLair, in0k_ext4ColorTheme_maker, Unit2, 
+cs_W3_WCAG_relativeLuminance_clcIntersection
   { you can add units after this };
 
 {$R *.res}
